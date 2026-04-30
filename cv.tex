@@ -1,0 +1,276 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+\documentclass[letterpaper,11pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{amsmath} 
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{academicons}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=apa,sorting=ydnt]{biblatex}\defbibenvironment{bibliography}
+{\enumerate{}
+{\setlength{\leftmargin}{\bibhang}%
+\setlength{\itemindent}{-\leftmargin}%
+\setlength{\itemsep}{\bibitemsep}%
+\setlength{\parsep}{\bibparsep}}}
+{\endenumerate}
+{\item}
+\AtEveryBibitem{%
+  \clearfield{note}%
+}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+\pagestyle{plain} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Alexander C Adia} \\[7.5pt]
+\raisebox{-0.05\height}\faCompass\ 2121 Berkeley Way West, 5th Floor, Berkeley, CA 94704  \\
+\href{mailto:a.adia@berkeley.edu}{\raisebox{-0.05\height}\faEnvelope \ a.adia@berkeley.edu} \ $|$ \ \href{http://adiaac.github.io}{\raisebox{-0.05\height}\faGlobe \ Personal Site} \ 
+\end{tabularx}
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+2022 - Present & PhD - Health Policy (Population and Data Science) \hfill \normalsize  \textbf{UC Berkeley} \\
+2018 - 2019 & MPH \hfill \normalsize  \textbf{Brown University} \\
+2014 - 2018 & BA - Public Health with Honors \hfill \normalsize  \textbf{Brown University} \\
+
+\end{tabularx}
+
+\section{Dissertation}
+\textbf{Title:} Essays on Medical Debt and Quality of Care\\
+\textbf{Committee:} Hector P. Rodriguez [Chair], Ambar La Forgia, Becky Staiger, Charleen Hsuan (Penn State) \\
+\textbf{Short Description:} I consider affordability and commercialization in the United States and policy remedies to protect patient welfare. In my first paper, I leverage borrower-level estimates of race and ethnicity to assess disparities in medical debt in collections. In my second paper, I assess the impact of state-implemented surprise billing laws before the No Surprises Act on medical debt. In my third paper, I analyze how hospital market consolidation produces heterogeneous impacts on patient access and quality of care by a) race and ethnicity and b) payer status.
+%----------------------------------------------------------------------------------------
+%	Academic Work
+%----------------------------------------------------------------------------------------
+\section{Publications - Health Services and Policy}
+\begin{refsection}[Health Policy.bib]
+\nocite{*}
+\printbibliography[heading=none]
+\end{refsection}
+
+\section{Publications - Behavioral and Social Sciences in Health}
+\begin{refsection}[Other.bib]
+\nocite{*}
+\printbibliography[heading=none]
+\end{refsection}
+
+\section{Book Chapters}
+\begin{refsection}[Books.bib]
+\nocite{*}
+\printbibliography[heading=none]
+\end{refsection}
+
+\section{Works in Progress (project titles anonymized for peer review)}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Hospital Ownership and Medical Debt (with Ambar La Forgia, Adam Leive, and Elena Prager)
+        \item[--] Surprise Billing Laws and Medical Debt (solo author; job market paper)
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+
+ \section{Selected Presentations and Guest Lectures}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\multicolumn{2}{@{}X@{}}{\textbf{2018:} International AIDS Society Conference, APHA Annual Meeting; \textbf{2019:} University of the Philippines – Manila, APHA Annual Meeting; \textbf{2020:} International AIDS Society Conference, California State University – East Bay; \textbf{2021:} APHA Annual Meeting; \textbf{2022:} AcademyHealth ARM, APHA Annual Meeting; \textbf{2023:} AHRQ NRSA Trainee Conference (Closing Plenary Panel), AcademyHealth ARM, APHA Annual Meeting, East Virginia Medical School;
+\textbf{2025:} AcademyHealth ARM, University of Texas at Austin, Washington State University; \textbf{2026:} University of Illinois Urbana-Champaign, AcademyHealth ARM, AcademyHealth Health Economics Interest Group - Rising Economist Session}
+\end{tabularx}
+
+
+\section{Scholarships and Fellowships}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+2026 - 2027 & University of California Dissertation-Year Fellowship\\
+2024 - 2025 & Mentored Research Award - UC Berkeley Graduate Division\\
+2023 - 2024 & Centene Health Policy Fellowship - UC Berkeley School of Public Health\\
+2022 - 2024 & AHRQ NRSA T32 Pre-Doctoral Fellowship\\
+2023 & Conference Travel Grant - UC Berkeley Graduate Division  \\
+2018 - 2019 & Merit Scholarship - Brown University School of Public Health \\
+2018 & Conference Scholarship - International AIDS Society \\
+2018 & David A. Winston Health Policy Scholarship \\
+2014 & Class of 1933 Scholarship - Brown University \\
+\end{tabularx}
+
+\section{Awards and Honors}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+2026 & Outstanding Graduate Student Instructor (OGSI) Award - UC Berkeley \\
+2023 & Student Paper Award - APHA Medical Care Section  \\
+2023 & Outstanding Reviewer - Annals of Internal Medicine  \\
+2019 & Best Student Abstract - APHA Asian and Pacific Islander Caucus \\
+2019 & Outstanding Academic Accomplishment by a Master’s Student - Brown Graduate School \newline
+\small{\textit{Awarded to a single graduating master’s student demonstrating the strongest achievement in thesis, projects or research}} \\
+2014 & Eagle Scout Award \\
+\end{tabularx}
+
+\section{Research Grants}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+2026-2027 & National Institute for Health Care Management (NIHCM) Foundation Research Grant (PI: La Forgia) (\$49,938) \\
+2026-2027 & NIMHD Predoctoral Individual National Research Service Award F31 (Score: 21; pending administrative review) \\
+2025 &  RWJF HPRS Dissertation Award (\$6,500)\\
+2024 & Graduate Student Research Award - UC Berkeley-RWJF Family Policy Hub (\$12,500) \\
+2024 & UC Berkeley Center for Healthcare Marketplace Innovation Fellowship (\$10,000) \\
+2023 - 2027 & Robert Wood Johnson Foundation Health Policy Research Scholars (\$124,000)\\
+2023 & Graduate Fellowship - California Policy Lab (\$10,000) \\
+2018 & NIMHD T37 Minority Health and Health Disparities Research Training Fellowship (\$10,000) \\
+2017 & Framework in Global Health Scholarship - Brown University (\$3,500) \\
+\end{tabularx}
+
+\section{Academic Service}
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{Service to the UC Berkeley Division of Health Policy and Management} \\
+Faculty Search Committee & \hfill 2024 \\
+PhD Admissions Committee & \hfill 2023--2024 \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{Service to the RWJF Health Policy Research Scholars Program} \\
+Summer Institute Planning Committee & \hfill 2023--Present \\
+NIH Fellowship Working Group & \hfill 2023--2025 \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+\textbf{Ad Hoc Journal Review} \\
+\multicolumn{2}{@{}X@{}}{
+American Journal of Public Health, Annals of Internal Medicine, BMC -- Health Services Research, BMC -- Public Health, BMJ Open, INQUIRY: The Journal of Health Care Organization, Provision, and Financing, International Journal of STD and AIDS, JAMA Network Open, Journal of Immigrant and Minority Health, Journal of Public Health, Journal of Racial and Ethnic Health Disparities, Journal of the International AIDS Society, Medical Care, Psychiatric Services, Sexuality Research and Social Policy, Social Science and Medicine, SSM -- Population Health, The Lancet HIV
+} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	Experience
+%----------------------------------------------------------------------------------------
+
+\section{Teaching Experience}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{UC Berkeley}  \\ [3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Graduate Student Instructor for PBHLTH 224W: Organizational Behavior and Management in Health Care. Instructor: Hector P. Rodriguez PhD, MPH. Fall 2025.  
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Brown University}  \\ [3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Graduate TA for PHP1680U: Intersectionality and Health Inequities. Instructor: Jennifer Nazareno PhD, MSW. Spring 2019.
+        \item[--] Undergraduate TA for PHP1070: The Burden of Disease in Developing Countries. Instructor: Stephen McGarvey PhD, MPH. Fall 2017 and 2018 (Head Teaching Assistant).
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\section{Pre-PhD Employment}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{PRECISIONadvisors (now Precision AQ)} & \hfill July 2019 - July 2022 \\
+\textit{Senior Consultant, Global Pricing and Market Access} & \hfill New York, NY \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Responsible for multiple workstreams across a diverse set of consulting engagements for pharmaceutical and biotech companies, utilizing both qualitative and quantitative methodologies
+        \item[--] Expertise includes launch pricing and access strategies, value-based contracting, and life cycle management in a wide range of therapeutic areas, including chronic disease, oncology, rare disease, and vaccines
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+\section{Community Experience}
+\begin{tabularx}{\linewidth}{ @{}X r@{} }
+\textbf{Filipinx/a/o Community Health Association} & \hfill May 2021 - Present \\
+\textit{President (2023-2025); Board Member Since 2021} & \hfill Los Angeles, CA \
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}X r@{} }
+\textbf{Philippine Health Initiative for Research, Service, and Training (PHIRST)} & \hfill Jan 2019 - Present \\
+\textit{Co-Founder / Researcher} & \hfill Providence, RI \
+\end{tabularx}
+
+\vfill
+\center{\footnotesize Last updated: \today}
+
+\end{document}
