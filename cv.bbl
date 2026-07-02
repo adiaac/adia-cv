@@ -62,10 +62,13 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Accepted in Health Affairs Scholar}
+      \field{journaltitle}{Health Affairs Scholar}
       \field{title}{Trends in {Medical Debt} in the {United} {States} by {Imputed Borrower Race and Ethnicity}, 2016-2022}
       \field{year}{2026}
       \true{nocite}
+      \verb{doi}
+      \verb https://doi.org/10.1093/haschl/qxag091
+      \endverb
     \endentry
     \entry{adia_health_2025}{article}{}{}
       \name{author}{3}{}{%
@@ -928,10 +931,13 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Accepted in Health Affairs Scholar}
+      \field{journaltitle}{Health Affairs Scholar}
       \field{title}{Trends in {Medical Debt} in the {United} {States} by {Imputed Borrower Race and Ethnicity}, 2016-2022}
       \field{year}{2026}
       \true{nocite}
+      \verb{doi}
+      \verb https://doi.org/10.1093/haschl/qxag091
+      \endverb
     \endentry
     \entry{adia_health_2025}{article}{}{}
       \name{author}{3}{}{%
